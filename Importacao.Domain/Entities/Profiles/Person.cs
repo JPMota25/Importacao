@@ -7,16 +7,20 @@ public class Person : Entity {
 	public long Id { get; set; }
 	public string Nome { get; set; }
 	public long GrupoId { get; set; }
+	public long  DepartamentoId { get; set; }
 	public  string? Matricula { get; set; }
 	public Document? Documento { get; set; }
+	public long EmpresaId { get; set; }
 
 	public Person() { }
 
-	public Person(string nome, Document? documento, long empresaId, string? matricula) {
+	public Person(string nome, Document? documento, long grupoId, string? matricula,  long departamentoId, long empresaId) {
 		Nome = nome;
 		Documento = documento;
-		GrupoId = empresaId;
+		GrupoId = grupoId;
 		Matricula = matricula;
+		DepartamentoId = departamentoId;
+		EmpresaId = empresaId;
 		Validate();
 	}
 
